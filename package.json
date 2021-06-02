@@ -1,0 +1,44 @@
+{
+  "name": "@phartiyal/heading",
+  "version": "0.1.0",
+  "description": "A simple heading component",
+  "author": "Phartiyal",
+  "license": "UNLICENSED",
+  "source": "src/index.tsx",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/esm/index.d.ts",
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:electriccode/heading.git"
+  },
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc --module esnext --target es6 --outDir dist/esm",
+    "build:cjs": "tsc --module commonjs --target es5 --outDir dist/cjs",
+    "watch": "tsc -w",
+    "ver": "tsc -v",
+    "prebuild": "rimraf dist"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "styled-components": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.9",
+    "@types/styled-components": "^5.1.9",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "rimraf": "^3.0.2",
+    "styled-components": "^5.0.0",
+    "typescript": "^3.9.9"
+  }
+}
